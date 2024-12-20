@@ -1,5 +1,4 @@
 "use client";
-import React from 'react';
 import FadeLoader from "react-spinners/ClipLoader";
 
 export default function Loader() {

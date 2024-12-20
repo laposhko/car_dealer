@@ -1,5 +1,4 @@
 "use client";
-import React from 'react';
 export default function Error({  reset }) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">

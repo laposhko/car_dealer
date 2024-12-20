@@ -1,4 +1,3 @@
-import React from 'react';
 export default async function ModelsList({ makeId, year }) {
   const res = await fetch(
     `https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`

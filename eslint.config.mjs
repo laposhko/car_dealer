@@ -5,7 +5,9 @@ import pluginReact from "eslint-plugin-react";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {
+    pluginReact.configs.flat.recommended,
+
+  { 
     files: ["**/*.{js,mjs,cjs,jsx}"],
     languageOptions: { globals: globals.browser },
     rules: {
@@ -15,17 +17,18 @@ export default [
       "semi": ["error", "always"],
       "eqeqeq": ["error", "always"],
       "no-undef": "error",
-      "react/prop-types": 0, 
       "react/react-in-jsx-scope": "off",
       "react/jsx-uses-react": "off",
       "react/jsx-no-target-blank": "off",
+      "react/prop-types": "off",
+
     },
     settings: {
       react: {
-        version: 'detect', // Automatically detects the React version
+        version: 'detect', 
       },
-  },
+    },
+    ignores: ["node_modules"],
   },
   pluginJs.configs.recommended,
-  pluginReact.configs.flat.recommended,
 ];
