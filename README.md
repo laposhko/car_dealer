@@ -52,12 +52,14 @@ Install Dependencies
 npm install
 # or
 yarn install
+```bash
 
 Run the Development Server
 ```bash
 npm run dev
 # or
 yarn dev
+```bash
 
 Open http://localhost:3000 in your browser to view the app.
 
