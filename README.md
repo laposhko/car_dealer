@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Next.js Vehicle Filter Application
 
-## Getting Started
+Overview
 
-First, run the development server:
+This is a Next.js application that allows users to filter and view vehicle models based on their make and model year. The application leverages the National Highway Traffic Safety Administration (NHTSA) API to fetch and display vehicle data. The app includes two main pages:
 
-```bash
+Home Page: Users can select a vehicle make and model year using dropdowns. The "Next" button navigates to the result page.
+
+Result Page: Displays vehicle models for the selected make and year.
+
+The app is styled with Tailwind CSS and uses React's Suspense component for improved user experience during data fetching.
+
+Features
+
+Dynamic Dropdowns: Fetches vehicle makes dynamically from the NHTSA API.
+
+Year Selection: Supports years from 2015 to the current year.
+
+Dynamic Routing: Navigates to a dynamically generated result page based on user selections.
+
+Static Paths: Uses generateStaticParams for pre-rendering result pages.
+
+Loading States: Implements React Suspense and a loading fallback.
+
+Responsive Design: Styled with Tailwind CSS for a mobile-friendly layout.
+
+Prerequisites
+
+Node.js (version 16 or higher)
+
+npm or yarn package manager
+
+Getting Started
+
+Clone the Repository
+
+git clone <repository-url>
+cd nextjs-vehicle-filter
+
+Install Dependencies
+
+npm install
+
+# or
+
+yarn install
+
+Run the Development Server
+
 npm run dev
+
 # or
+
 yarn dev
+
+Open http://localhost:3000 in your browser to view the app.
+
+Build and Deployment
+
+Build the Application
+
+npm run build
+
 # or
-pnpm dev
+
+yarn build
+
+Start the Production Server
+
+npm start
+
 # or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+yarn start
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can also deploy the app to a hosting provider that supports Next.js, such as Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Environment Variables
 
-## Learn More
+The app does not require any specific environment variables. However, you can configure them in a .env.local file if needed.
 
-To learn more about Next.js, take a look at the following resources:
+Application Architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+App Directory Structure: Leverages Next.js' app/ directory for routing and server-side rendering.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Data Fetching:
 
-## Deploy on Vercel
+generateStaticParams: Generates static paths for result pages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Fetching vehicle makes and models dynamically from NHTSA API.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+React Suspense:
+
+Used to display a loading fallback during data fetching.
+
+Styling:
+
+Tailwind CSS for responsive and consistent UI design.
+
+API Endpoints
+
+Vehicle Makes
+
+Endpoint: https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json
+
+Vehicle Models by Make ID and Year
+
+Endpoint: https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/{makeId}/modelyear/{year}?format=json
+
+Troubleshooting
+
+No Vehicle Makes Displayed: Ensure you have an active internet connection and the NHTSA API is accessible.
+
+Navigation Issues: Ensure both make and year are selected before clicking "Next."
+
+Build Errors: Check Node.js and npm versions, and ensure all dependencies are installed.
+
+Contributing
+
+Contributions are welcome! Please create an issue or submit a pull request with detailed information about the changes.
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
