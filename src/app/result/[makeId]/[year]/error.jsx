@@ -1,6 +1,6 @@
 "use client";
-import Loader from "@/app/components/Loader";
-export default function Error({ error, reset }) {
+import React from 'react';
+export default function Error({  reset }) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
       <div className="text-center bg-white p-6 rounded-lg shadow-lg">
@@ -8,7 +8,7 @@ export default function Error({ error, reset }) {
           Something went wrong!
         </h2>
         <p className="text-gray-600 mb-6">
-          An error occurred while loading the page. Error text: Please try
+          An error occurred while loading the page. Please try
           again.
         </p>
         <button
@@ -18,7 +18,6 @@ export default function Error({ error, reset }) {
           Try again
         </button>
       </div>
-      <Loader></Loader>
     </div>
   );
 }
