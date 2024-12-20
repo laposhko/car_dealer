@@ -14,25 +14,25 @@
 
 This is a Next.js application that allows users to filter and view vehicle models based on their make and model year. The app includes two main pages:
 
-Home Page: Users can select a vehicle make and model year using dropdowns. The "Next" button navigates to the result page.
+**Home Page**: Users can select a vehicle make and model year using dropdowns. The "Next" button navigates to the result page.
 
-Result Page: Displays vehicle models for the selected make and year.
+**Result Page**: Displays vehicle models for the selected make and year.
 
 The app is styled with Tailwind CSS and uses React's Suspense component for improved user experience during data fetching.
 
 ## Features
 
-Dynamic Dropdowns: Fetching vehicles is made dynamically.
+**Dynamic Dropdowns**: Fetching vehicles is made dynamically.
 
-Year Selection: Supports years from 2015 to the current year.
+**Year Selection**: Supports years from 2015 to the current year.
 
-Dynamic Routing: Navigate to a dynamically generated result page based on user selections.
+**Dynamic Routing**: Navigate to a dynamically generated result page based on user selections.
 
-Static Paths: Uses generateStaticParams for pre-rendering result pages.
+**Static Paths**: Uses generateStaticParams for pre-rendering result pages.
 
-Loading States: Implements React Suspense and a loading fallback.
+**Loading States**: Implements React Suspense and a loading fallback.
 
-Responsive Design: Styled with Tailwind CSS for a mobile-friendly layout.
+**Responsive Design**: Styled with Tailwind CSS for a mobile-friendly layout.
 
 ## Prerequisites
 
@@ -48,13 +48,13 @@ git clone https://github.com/laposhko/car_dealer.git
 cd <your-local-path-to-project>
 
 Install Dependencies
-
+```bash
 npm install
 # or
 yarn install
 
 Run the Development Server
-
+```bash
 npm run dev
 # or
 yarn dev
@@ -64,13 +64,13 @@ Open http://localhost:3000 in your browser to view the app.
 ## Build and Deployment
 
 Build the Application
-
+```bash
 npm run build
 # or
 yarn build
 
 Start the Production Server
-
+```bash
 npm start
 # or
 yarn start
