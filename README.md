@@ -42,24 +42,24 @@ npm or yarn package manager
 
 ## Getting Started
 
-Clone the Repository
+**Clone the Repository**
 
 git clone https://github.com/laposhko/car_dealer.git
 cd <your-local-path-to-project>
 
-Install Dependencies
+**Install Dependencies**
 ```bash
 npm install
 # or
 yarn install
-```bash
+```
 
-Run the Development Server
+**Run the Development Server**
 ```bash
 npm run dev
 # or
 yarn dev
-```bash
+```
 
 Open http://localhost:3000 in your browser to view the app.
 
@@ -70,13 +70,13 @@ Build the Application
 npm run build
 # or
 yarn build
-
+```
 Start the Production Server
 ```bash
 npm start
 # or
 yarn start
-
+```
 You can also deploy the app to a hosting provider that supports Next.js, such as Vercel.
 
 ## Environment Variables
@@ -85,29 +85,29 @@ The app does not require any specific environment variables. However, you can co
 
 ## Application Architecture
 
-App Directory Structure: Leverages Next.js' app/ directory for routing and server-side rendering.
+**App Directory Structure**: Leverages Next.js' app/ directory for routing and server-side rendering.
 
-Data Fetching:
+**Data Fetching**:
 
 generateStaticParams: Generates static paths for result pages.
 
 Fetching vehicle makes and models dynamically from NHTSA API.
 
-React Suspense:
+**React Suspense**:
 
 Used to display a loading fallback during data fetching.
 
-Styling:
+**Styling**:
 
 Tailwind CSS for responsive and consistent UI design.
 
 ## API Endpoints
 
-Vehicle Makes
+**Vehicle Makes**
 
 Endpoint: https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json
 
-Vehicle Models by Make ID and Year
+**Vehicle Models by Make ID and Year**
 
 Endpoint: https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/{makeId}/modelyear/{year}?format=json
 
