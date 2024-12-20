@@ -1,5 +1,6 @@
-**#Next.js Vehicle Filter Application
- Table of Contents
+# Next.js Vehicle Filter Application
+
+ ## Table of Contents
 1. [Overview](#overview)
 2. [Features](#features)
 3. [Prerequisites](#prerequisites)
